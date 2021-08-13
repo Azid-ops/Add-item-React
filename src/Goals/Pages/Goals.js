@@ -1,25 +1,24 @@
 import React, { useState } from 'react';
-import Goal from '../Components/Goal';
 
-import './Goals.css';
-const Goals = () =>{
-    const [myGoals, setGoals]= useState([
-        {id:'1', text:"Complete React Course!"},
-        {id:'2', text:"Complete Node Course!"},
-        {id:'3', text:"Complete MongoDb Course!"}
+import MineGoals from '../Components/MineGoals';
+import AddGoal from '../Components/AddGoal';
+import './Goals.css'
+
+const Goals =() =>{
+    const [goals , setGoals]= useState([
     ]);
 
-    const changeHandler = (newGoal)=>{
-        setGoals(previous =>{
-            return previous.concat(newGoal);
-        });
+    const addText= (goal) =>{
+        setGoals(goals.concat(goal));
+        console.log(goals);
     }
 
     return(
         <ul className="list-items">
-            <Goal items={myGoals} change={changeHandler}/>
-        </ul>
-    )  
+            <AddGoal  addText={addText}/>
+            <MineGoals items={goals}/>
+        </ul>  
+    )
 }
 
 export default Goals;

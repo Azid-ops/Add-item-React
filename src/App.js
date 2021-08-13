@@ -1,12 +1,15 @@
-import  {React , Component } from 'react';
-import Goals from './Goals/Pages/Goals';
+import React, {Component} from 'react';
 
 import './App.css';
+import Goals from './Goals/Pages/Goals';
 
-class App extends Component{
+class App extends Component {
   render(){
     return(
-      <Goals />
+      <div>
+          <Goals />
+      </div>
+      
     )
   }
 }
