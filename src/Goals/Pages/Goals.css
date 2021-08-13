@@ -1,0 +1,10 @@
+.list-items
+{
+    list-style: none;
+}
+.list-items li
+{
+    padding: 2rem;
+    border: 1px solid #ccc;
+    margin: 3rem;
+}
